@@ -1,27 +1,62 @@
 {
   "posts": [
     {
-      "firstname": "jhbihvy",
-      "lastname": "uyvuv",
-      "birthdate": "275760-06-05",
-      "gender": "m",
-      "education": "12th Pass",
-      "company": "jhuh",
-      "jobExperience": 656854,
-      "salary": 54956,
-      "id": 1
+      "firstname": "Jadu",
+      "lastname": "Singh",
+      "birthdate": "1992-08-20",
+      "gender": "f",
+      "education": "PHD",
+      "company": "JSU",
+      "jobExperience": 9,
+      "salary": 40,
+      "profile": "Jadu.jpg",
+      "id": 5
     },
     {
-      "firstname": "hgvugc",
-      "lastname": "utgfu8gf",
-      "birthdate": "275760-05-06",
+      "firstname": "Amar",
+      "lastname": "Kumar",
+      "birthdate": "1996-03-01",
       "gender": "m",
-      "education": "12th Pass",
-      "company": "jhgvuyyi",
-      "jobExperience": 649864,
-      "salary": 8964964,
-      "profile": "WIN_20230118_18_22_14_Pro.jpg",
-      "id": 2
+      "education": "UG",
+      "company": "Conacent",
+      "jobExperience": 0,
+      "salary": 0,
+      "profile": "WIN_20230119_12_37_53_Pro.jpg",
+      "id": 6
+    },
+    {
+      "firstname": "A",
+      "lastname": "L",
+      "birthdate": "2023-09-09",
+      "gender": "m",
+      "education": "10th Pass",
+      "company": "z",
+      "jobExperience": 9,
+      "salary": 10,
+      "profile": "WIN_20230119_12_37_53_Pro.jpg",
+      "id": 7
+    },
+    {
+      "firstname": "j",
+      "lastname": "u",
+      "birthdate": "",
+      "gender": "",
+      "company": "",
+      "jobExperience": "",
+      "salary": "",
+      "id": 8
+    },
+    {
+      "firstname": "Test First Name",
+      "lastname": "Test Last Name",
+      "birthdate": "7777-07-07",
+      "gender": "m",
+      "education": "PG",
+      "company": "zzz",
+      "jobExperience": 0,
+      "salary": 888,
+      "profile": "Jadu.jpg",
+      "id": 9
     }
   ],
   "comments": [],

@@ -18,9 +18,17 @@
     </div>
 
     <!-- Area to display all the Employees -->
-    <div class="employees black-border">
-      <div class="col text-center">
-        <span class="text-secondary fs-2 fw-bold fst-italic">There are No Employees Added!</span>
+    <div class="employees">
+      <div class="row mt-5" *ngIf="employees.length == 0">
+        <div class="col text-center">
+          <span class="text-secondary fs-2 fw-bold fst-italic">There are No Employees Added!</span>
+        </div>
+      </div>
+      <!-- Display the Employees -->
+      <div class="row mt-4" *ngFor="let employee of employeesToDisplay; let ei = index">
+        <div class="col">
+          <app-employee [employee]="employee"></app-employee>
+        </div>
       </div>
     </div>
   </main>
