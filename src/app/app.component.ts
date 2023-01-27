@@ -110,4 +110,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   public get Salary(): FormControl {
     return this.employeeForm.get('salary') as FormControl;
   }
+
+  removeEmployee(event: any) {
+    this.employees.forEach((val, index) => {
+      if (val.id === parseInt(event)) {
+        this.employeeService.deleteEmployee(event).subscribe((res) => {
+          this.employees.splice(index, 1)
+        });
+      }
+    });
+  }
 }

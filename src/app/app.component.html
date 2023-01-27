@@ -27,7 +27,7 @@
       <!-- Display the Employees -->
       <div class="row mt-4" *ngFor="let employee of employeesToDisplay; let ei = index">
         <div class="col">
-          <app-employee [employee]="employee"></app-employee>
+          <app-employee [employee]="employee" (onRemoveEmployee)="removeEmployee($event)"></app-employee>
         </div>
       </div>
     </div>

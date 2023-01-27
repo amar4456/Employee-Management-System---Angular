@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Employee } from '../models/employee.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { Employee } from '../models/employee.model';
 })
 export class EmployeeComponent implements OnInit {
   @Input() employee: Employee;
+  @Output() onRemoveEmployee = new EventEmitter<number>();
 
   constructor() {
     this.employee = {
@@ -25,5 +26,9 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.employee)
+  }
+
+  deleteEmployeeClicked() {
+    this.onRemoveEmployee.emit(this.employee.id);
   }
 }

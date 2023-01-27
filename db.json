@@ -25,28 +25,6 @@
       "id": 6
     },
     {
-      "firstname": "A",
-      "lastname": "L",
-      "birthdate": "2023-09-09",
-      "gender": "m",
-      "education": "10th Pass",
-      "company": "z",
-      "jobExperience": 9,
-      "salary": 10,
-      "profile": "WIN_20230119_12_37_53_Pro.jpg",
-      "id": 7
-    },
-    {
-      "firstname": "j",
-      "lastname": "u",
-      "birthdate": "",
-      "gender": "",
-      "company": "",
-      "jobExperience": "",
-      "salary": "",
-      "id": 8
-    },
-    {
       "firstname": "Test First Name",
       "lastname": "Test Last Name",
       "birthdate": "7777-07-07",
