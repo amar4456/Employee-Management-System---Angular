@@ -149,4 +149,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.Salary.setValue(emp.salary);
     this.fileInput.nativeElement.value = '';
   }
+
+  searchEmployees(event: any) {
+    let filteredEmployees: Employee[] = [];
+
+    if (event === ''){
+      this.employeesToDisplay = this.employees;
+    } else {
+      filteredEmployees = this.employees.filter((val, index) => {
+        let targetKey = val.firstname.toLowerCase() + '' + val.lastname.toLowerCase();
+        let searchKey = event.toLowerCase();
+        return targetKey.includes(searchKey);
+      });
+      this.employeesToDisplay = filteredEmployees;
+    }
+  }
 }
