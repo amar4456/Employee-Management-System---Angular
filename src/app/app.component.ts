@@ -10,6 +10,7 @@ import { EmployeeService } from './services/employee.service';
 })
 export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('fileInput') fileInput: any;
+  @ViewChild('addEmployeeButton') addEmployeeButton: any;
   title = 'my-app';
 
   employeeForm: FormGroup;
@@ -119,5 +120,33 @@ export class AppComponent implements OnInit, AfterViewInit {
         });
       }
     });
+  }
+
+  editEmployee(event: any) {
+    this.employees.forEach((val, ind) => {
+      if(val.id === event){
+        this.setForm(val);
+      }
+    });
+    this.removeEmployee(event);
+    this.addEmployeeButton.nativeElement.click();
+  }
+
+  setForm(emp: Employee) {
+    this.FirstName.setValue(emp.firstname);
+    this.LastName.setValue(emp.lastname);
+    this.BirthDay.setValue(emp.birthdate);
+    this.Gender.setValue(emp.gender);
+
+    let educationIndex = 0;
+    this.educationOptions.forEach((val, index) => {
+      if (val === emp.education) educationIndex = index;
+    });
+    this.Education.setValue(educationIndex);
+
+    this.Company.setValue(emp.company);
+    this.jobExperience.setValue(emp.jobExperience);
+    this.Salary.setValue(emp.salary);
+    this.fileInput.nativeElement.value = '';
   }
 }

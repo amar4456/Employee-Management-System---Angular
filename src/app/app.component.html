@@ -8,7 +8,7 @@
     <!-- Add Employees -->
     <div class="toolbar">
       <div class="add-employees">
-        <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Add employees</button>
+        <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>Add employees</button>
       </div>
 
       <!-- Search Employees -->
@@ -27,7 +27,7 @@
       <!-- Display the Employees -->
       <div class="row mt-4" *ngFor="let employee of employeesToDisplay; let ei = index">
         <div class="col">
-          <app-employee [employee]="employee" (onRemoveEmployee)="removeEmployee($event)"></app-employee>
+          <app-employee [employee]="employee" (onRemoveEmployee)="removeEmployee($event)" (onEditEmployee)="editEmployee($event)"></app-employee>
         </div>
       </div>
     </div>

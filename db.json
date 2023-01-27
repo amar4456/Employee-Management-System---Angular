@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "firstname": "Jadu",
-      "lastname": "Singh",
-      "birthdate": "1992-08-20",
-      "gender": "f",
-      "education": "PHD",
-      "company": "JSU",
-      "jobExperience": 9,
-      "salary": 40,
-      "profile": "Jadu.jpg",
-      "id": 5
-    },
-    {
       "firstname": "Amar",
       "lastname": "Kumar",
       "birthdate": "1996-03-01",
@@ -25,16 +13,16 @@
       "id": 6
     },
     {
-      "firstname": "Test First Name",
-      "lastname": "Test Last Name",
-      "birthdate": "7777-07-07",
-      "gender": "m",
-      "education": "PG",
-      "company": "zzz",
-      "jobExperience": 0,
-      "salary": 888,
+      "firstname": "Jadu",
+      "lastname": "Singh DIllow",
+      "birthdate": "1992-08-20",
+      "gender": "f",
+      "education": "PHD",
+      "company": "JSU",
+      "jobExperience": 9,
+      "salary": 40,
       "profile": "Jadu.jpg",
-      "id": 9
+      "id": 7
     }
   ],
   "comments": [],
