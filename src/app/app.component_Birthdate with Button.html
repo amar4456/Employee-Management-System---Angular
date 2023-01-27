@@ -68,9 +68,12 @@
           <div class="row">
             <div class="col">
               <label for="datepicker" class="form-label">Birthdate</label>
-              <input type="date" [(ngModel)]="date1" class="form-control" id="datepicker" formControlName="birthday" (change)="calculateYrs()">
+              <input type="date" [(ngModel)]="date1" class="form-control" id="datepicker" formControlName="birthday">
             </div>
-            
+            <button type="button" class="btn btn-danger" (click)="calculateYrs()">Calculate Age</button>
+            <br><br>
+            <h4><strong>Age -> {{totalYrs}}</strong></h4>
+            <br><br>
             <div class="col">
               <div class="row">
                 <h6 class="text-secoundary">Gender</h6>
@@ -141,7 +144,7 @@
       </div>
       <div class="modal-footer">
         <ng-container *ngIf="totalYrs > 18 ; then add; else beforeAdd">
-          
+
         </ng-container>
 
         <ng-template #add>
@@ -150,7 +153,7 @@
 
         <ng-template #beforeAdd>
           <div>
-            <h6 style="color: red;">Age must be greater than 18.</h6>
+            Please calculate the age first. age must be greater than 18.
           </div>
         </ng-template>
       

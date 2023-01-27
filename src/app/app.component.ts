@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { ControlContainer, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { ControlContainer, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Employee } from './models/employee.model';
 import { EmployeeService } from './services/employee.service';
 
@@ -32,16 +32,32 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.employeesToDisplay = this.employees;
   }
 
+  date1 : any;
+  date2 : any;
+
+  totalYrs : any;
+
+  calculateYrs(){
+    const date1Modified = new Date(this.date1);
+    const date2Modified = new Date();
+
+    const days = date2Modified.getTime() - date1Modified.getTime();
+
+    this.totalYrs = Math.floor((days / (1000 * 3600 * 24))/365);
+    
+    // alert(this.totalDays)
+  }
+
   ngOnInit(): void {
     this.employeeForm = this.fb.group({
-      firstname: this.fb.control(''),
-      lastname: this.fb.control(''),
-      birthday: this.fb.control(''),
-      gender: this.fb.control(''),
+      firstname: this.fb.control('', Validators.required),
+      lastname: this.fb.control('', Validators.required),
+      birthday: this.fb.control('', Validators.required),
+      gender: this.fb.control('', Validators.required),
       education: this.fb.control('default'),
-      company: this.fb.control(''),
-      jobExperience: this.fb.control(''),
-      salary: this.fb.control(''),
+      company: this.fb.control('', Validators.required),
+      jobExperience: this.fb.control('', Validators.required),
+      salary: this.fb.control('', Validators.required),
     });
 
     this.employeeService.getEmployees().subscribe(res => {
